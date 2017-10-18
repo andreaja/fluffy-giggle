@@ -1,0 +1,11 @@
+
+
+.daylist li:nth-of-type(odd) {
+    background: #225f5e; /* pine green */
+    color: #c7f7ca;
+}
+
+.daylist li:nth-of-type(even) {
+    background: #c7f7ca; /* sea green */
+    color: #225f5e
+}
