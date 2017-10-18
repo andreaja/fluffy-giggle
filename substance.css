@@ -4,6 +4,12 @@ main {
 
 ul {
     list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.daylist > li {
+    padding-top: 0.1rem;
 }
 
 .daylist > li:nth-of-type(odd) {
@@ -15,7 +21,6 @@ ul {
     background: #c7f7ca; /* sea green */
     color: #225f5e
 }
-
 
 .timeofday {
     vertical-align: top;
@@ -30,4 +35,10 @@ ul {
 
 .event .title {
     font-weight: bold;
+}
+
+.day h2 {
+    background: darkgrey;
+    font-size: 1rem;
+    margin: 0;
 }
