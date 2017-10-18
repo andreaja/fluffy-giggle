@@ -10,16 +10,9 @@ ul {
 
 .daylist > li {
     padding-top: 0.1rem;
-}
-
-.daylist > li:nth-of-type(odd) {
-    background: #225f5e; /* pine green */
-    color: #c7f7ca;
-}
-
-.daylist > li:nth-of-type(even) {
+    border-top: 1px solid rgba(0,0,0,0.1);
     background: #c7f7ca; /* sea green */
-    color: #225f5e
+    color: #225f5e; /* pine green */
 }
 
 .timeofday {
@@ -38,7 +31,9 @@ ul {
 }
 
 .day h2 {
-    background: darkgrey;
+    background: #225f5e; /* sea green */
+    color: #c7f7ca;
     font-size: 1rem;
     margin: 0;
+    padding: 0.1rem;
 }
