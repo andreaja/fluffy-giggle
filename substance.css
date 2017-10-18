@@ -1,11 +1,33 @@
+main {
+    font-family: sans-serif;
+}
 
+ul {
+    list-style-type: none;
+}
 
-.daylist li:nth-of-type(odd) {
+.daylist > li:nth-of-type(odd) {
     background: #225f5e; /* pine green */
     color: #c7f7ca;
 }
 
-.daylist li:nth-of-type(even) {
+.daylist > li:nth-of-type(even) {
     background: #c7f7ca; /* sea green */
     color: #225f5e
+}
+
+
+.timeofday {
+    vertical-align: top;
+    text-align: right;
+    width: 1.3rem;
+    display: inline-block;
+}
+
+.event {
+    display: inline-block;
+}
+
+.event .title {
+    font-weight: bold;
 }
