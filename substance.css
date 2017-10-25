@@ -18,6 +18,9 @@ main {
     flex: 1 0 auto;
 }
 
+.main__column {
+}
+
 ul {
     list-style-type: none;
     padding: 0;
@@ -62,3 +65,12 @@ ul {
     padding: 0.1rem;
 }
 
+.endofweek {
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.month__month {
+    border-bottom: 1px dashed rgba(0,0,0,0.2);
+    margin-bottom: 0.2rem;
+    padding-bottom: 0.2rem;
+}
