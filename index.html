@@ -7,81 +7,81 @@
     <link rel="stylesheet" href="substance.css">
   </head>
   <body>
-    <main>
+    <main class="layout">
 
-      <div class="day main__column">
-        <h2>Wednesday October 18th</h2>
-        <ul class="daylist">
-          <li class="dl__item">
+      <div class="layout__day main__column">
+        <h2 class="day-header">Wednesday October 18th</h2>
+        <ul class="day">
+          <li class="day__item">
             <span class="timeofday">6</span>
             <ul class="event"><li class="title"></li><li></li><li></li></ul>
           </li>
-          <li>
+          <li class="day__item">
             <span class="timeofday">7</span>
             <ul class="event"><li class="title"></li><li></li><li></li></ul>
           </li>
-          <li>
+          <li class="day__item">
             <span class="timeofday">8</span>
             <ul class="event"><li class="title">Demo</li><li>M1802</li><li>3 accepted</li></ul>
           </li>
-          <li>
+          <li class="day__item">
             <span class="timeofday">9</span>
             <ul class="event"><li class="title" class="title">Developer Only</li><li>M1702</li><li>30 accepted, 2 declined, 5 pending</li></ul>
           </li>
-          <li>
+          <li class="day__item">
             <span class="timeofday">10</span>
             <ul class="event"><li class="title"></li><li></li><li></li></ul>
           </li>
-          <li>
+          <li class="day__item">
             <span class="timeofday">11</span>
             <ul class="event"><li class="title">Fot i bakken</li><li>Stillerom</li><li>Kåre</li></ul>
           </li>
-          <li>
+          <li class="day__item">
             <span class="timeofday">12</span>
             <ul class="event"><li class="title">Learning review: Downtime</li><li>M1719</li><li>10 accepted, 1 pending</li></ul>
           </li>
-          <li>
+          <li class="day__item">
             <span class="timeofday">13</span>
             <ul class="event"><li class="title"></li><li></li><li></li></ul>
           </li>
-          <li>
+          <li class="day__item">
             <span class="timeofday">14</span>
             <ul class="event"><li class="title">Reading Club</li><li>M1719</li><li>1 accepted, 15 pending, 2 declined</li></ul>
           </li>
-          <li>
+          <li class="day__item">
             <span class="timeofday">15</span>
             <ul class="event"><li class="title">Avdelingsmøte</li><li>M1702</li><li>15 accepted</li></ul>
           </li>
-          <li>
+          <li class="day__item">
             <span class="timeofday">16</span>
             <ul class="event"><li class="title"></li><li></li><li></li></ul>
           </li>
-          <li>
+          <li class="day__item">
             <span class="timeofday">17</span>
             <ul class="event"><li class="title"></li><li></li><li></li></ul>
           </li>
-          <li>
+          <li class="day__item">
             <span class="timeofday">18</span>
             <ul class="event"><li class="title"></li><li></li><li></li></ul>
           </li>
-          <li>
+          <li class="day__item">
             <span class="timeofday">19</span>
             <ul class="event"><li class="title"></li><li></li><li></li></ul>
           </li>
-          <li>
+          <li class="day__item">
             <span class="timeofday">20</span>
             <ul class="event"><li class="title"></li><li></li><li></li></ul>
           </li>
-          <li>
+          <li class="day__item">
             <span class="timeofday">21</span>
             <ul class="event"><li class="title"></li><li></li><li></li></ul>
           </li>
         </ul>
       </div>
 
-      <div class="week main__column">
-        <ul class="day-of-week-list">
-          <li class="dowl__weekday">
+      <div class="layout__week main__column">
+        <ul class="week">
+          <li class="week__weekday">
             <h2>Thursday October 19th</h2>
             <ul class="day-of-week">
               <li class="dow__item">8:30 – Standup</li>
@@ -89,7 +89,7 @@
               <li class="dow__item">Biggest meeting of the day</li>
             </ul>
           </li>
-          <li class="dowl__weekday">
+          <li class="week__weekday">
             <h2>Friday October 20th</h2>
             <ul class="day-of-week">
               <ul class="day-of-week">
@@ -99,20 +99,20 @@
               </ul>
             </ul>
           </li>
-          <li class="dowl__weekend">
+          <li class="week__weekend">
             <h2>Saturday October 21st</h2>
             <ul class="day-of-week">
               <li class="dow__item">Brunch</li>
               <li class="dow__item">Movienight</li>
             </ul>
           </li>
-          <li class="dowl__weekend">
+          <li class="week__weekend">
             <h2>Sunday October 22nd</h2>
             <ul class="day-of-week">
               <li class="dow__item">Brunch</li>
             </ul>
           </li>
-          <li class="dowl__weekday">
+          <li class="week__weekday">
             <h2>Monday October 23rd</h2>
             <ul class="day-of-week">
               <ul class="day-of-week">
@@ -121,7 +121,7 @@
               </ul>
             </ul>
           </li>
-          <li class="dowl__weekday">
+          <li class="week__weekday">
             <h2>Tuesday October 24th</h2>
             <ul class="day-of-week">
               <ul class="day-of-week">
@@ -132,7 +132,7 @@
               </ul>
             </ul>
           </li>
-          <li class="dowl__weekday">
+          <li class="week__weekday">
             <h2>Wednesday October 25th</h2>
             <ul class="day-of-week">
               <li class="dow__item">First meeting of the day</li>
@@ -140,31 +140,32 @@
             </ul>
           </li>
       </div>
-      <div class="month main__column">
-        <ul class="month__month">
-          <li><span class="dayofmonth">26</span></li>
-          <li><span class="dayofmonth">27</span> Bergen</li>
+
+      <div class="layout__month main__column">
+        <ul class="month">
+          <li class="month__item"><span class="dayofmonth">26</span></li>
+          <li class="month__item"><span class="dayofmonth">27</span> Bergen</li>
           <li class="endofweek"><span class="dayofmonth">28</span> Bergen</li>
-          <li><span class="dayofmonth">29</span> Bergen</li>
-          <li><span class="dayofmonth">30</span></li>
+          <li class="month__item"><span class="dayofmonth">29</span> Bergen</li>
+          <li class="month__item"><span class="dayofmonth">30</span></li>
         </ul>
-        <ul class="month__month">
-          <li><span class="dayofmonth">1</span></li>
-          <li><span class="dayofmonth">2</span></li>
-          <li><span class="dayofmonth">3</span></li>
+        <ul class="month__list">
+          <li class="month__item"><span class="dayofmonth">1</span></li>
+          <li class="month__item"><span class="dayofmonth">2</span></li>
+          <li class="month__item"><span class="dayofmonth">3</span></li>
           <li class="endofweek"><span class="dayofmonth">4</span></li>
-          <li><span class="dayofmonth">5</span></li>
-          <li><span class="dayofmonth">6</span></li>
-          <li><span class="dayofmonth">7</span></li>
-          <li><span class="dayofmonth">8</span></li>
-          <li><span class="dayofmonth">9</span> FFConf</li>
-          <li><span class="dayofmonth">10</span> FFConf</li>
+          <li class="month__item"><span class="dayofmonth">5</span></li>
+          <li class="month__item"><span class="dayofmonth">6</span></li>
+          <li class="month__item"><span class="dayofmonth">7</span></li>
+          <li class="month__item"><span class="dayofmonth">8</span></li>
+          <li class="month__item"><span class="dayofmonth">9</span> FFConf</li>
+          <li class="month__item"><span class="dayofmonth">10</span> FFConf</li>
           <li class="endofweek"><span class="dayofmonth">11</span></li>
-          <li><span class="dayofmonth">12</span></li>
-          <li><span class="dayofmonth">13</span> PVRIS @ Rockefeller</li>
-          <li><span class="dayofmonth">14</span></li>
-          <li><span class="dayofmonth">15</span></li>
-          <li><span class="dayofmonth">16</span></li>
+          <li class="month__item"><span class="dayofmonth">12</span></li>
+          <li class="month__item"><span class="dayofmonth">13</span> PVRIS @ Rockefeller</li>
+          <li class="month__item"><span class="dayofmonth">14</span></li>
+          <li class="month__item"><span class="dayofmonth">15</span></li>
+          <li class="month__item"><span class="dayofmonth">16</span></li>
         </ul>
       </div>
     </main>

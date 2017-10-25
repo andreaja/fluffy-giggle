@@ -3,23 +3,28 @@ h1, h2, h3, h4, h5 {
     margin: 0;
 }
 
-main {
+body {
     font-family: sans-serif;
+}
+
+.layout {
     color: #225f5e; /* pine green */
     display: flex;
     flex-wrap: wrap;
 }
 
-
-.day {
+.layout__day {
     flex: 1 0 15rem;
 }
-.week {
+
+.layout__week {
     flex: 1 0 auto;
 }
 
-.main__column {
+.layout__month {
+    flex: 1 0 auto;
 }
+
 
 ul {
     list-style-type: none;
@@ -27,8 +32,14 @@ ul {
     margin: 0;
 }
 
-.daylist > li {
-    padding-top: 0.1rem;
+.day-header {
+    color: #c7f7ca;  /* sea green */
+    background-color: #225f5e; /* pine green */
+    padding: 0.1rem;
+}
+
+.day__item {
+    padding: 0.1rem 0.5rem;
     border-top: 1px solid rgba(0,0,0,0.1);
     background-color: #c7f7ca; /* sea green */
 }
@@ -48,29 +59,25 @@ ul {
     font-weight: bold;
 }
 
-.day h2 {
-    color: #c7f7ca;  /* sea green */
-    background-color: #225f5e; /* pine green */
-    padding: 0.1rem;
-}
-
-.dowl__weekday {
+.week__weekday {
     border-bottom: 1px solid rgba(0,0,0,0.1);
     padding: 0.1rem;
 }
 
-.dowl__weekend {
+.week__weekend {
     background-color: #c7f7ca;
     border-bottom: 1px solid rgba(0,0,0,0.1);
     padding: 0.1rem;
+}
+
+
+.month {
+    border-bottom: 1px dashed rgba(0,0,0,0.2);
+    margin-bottom: 0.2rem;
+    padding-bottom: 0.2rem;
 }
 
 .endofweek {
     border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
-.month__month {
-    border-bottom: 1px dashed rgba(0,0,0,0.2);
-    margin-bottom: 0.2rem;
-    padding-bottom: 0.2rem;
-}
