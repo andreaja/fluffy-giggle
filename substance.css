@@ -25,6 +25,11 @@ body {
     flex: 1 0 auto;
 }
 
+.layout__year {
+    flex: 1 0 auto;
+
+}
+
 
 ul {
     list-style-type: none;
@@ -89,3 +94,9 @@ ul {
     display: inline-block;
 }
 
+.year-heading {
+    padding: 0.1rem 0.5rem 0.1rem 0.2rem;
+}
+.year__item {
+    padding: 0.1rem 0.5rem 0.1rem 0.2rem;
+}
