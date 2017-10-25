@@ -1,5 +1,21 @@
+h1, h2, h3, h4, h5 {
+    font-size: 1rem;
+    margin: 0;
+}
+
 main {
     font-family: sans-serif;
+    color: #225f5e; /* pine green */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.day {
+    flex: 1 0 15rem;
+}
+.week {
+    flex: 1 0 auto;
 }
 
 ul {
@@ -11,8 +27,7 @@ ul {
 .daylist > li {
     padding-top: 0.1rem;
     border-top: 1px solid rgba(0,0,0,0.1);
-    background: #c7f7ca; /* sea green */
-    color: #225f5e; /* pine green */
+    background-color: #c7f7ca; /* sea green */
 }
 
 .timeofday {
@@ -31,9 +46,19 @@ ul {
 }
 
 .day h2 {
-    background: #225f5e; /* sea green */
-    color: #c7f7ca;
-    font-size: 1rem;
-    margin: 0;
+    color: #c7f7ca;  /* sea green */
+    background-color: #225f5e; /* pine green */
     padding: 0.1rem;
 }
+
+.dowl__weekday {
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding: 0.1rem;
+}
+
+.dowl__weekend {
+    background-color: #c7f7ca;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding: 0.1rem;
+}
+
