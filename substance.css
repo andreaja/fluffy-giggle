@@ -74,7 +74,6 @@ ul {
     background-color: #c7f7ca;
 }
 
-
 .month {
     border-bottom: 1px dashed rgba(0,0,0,0.2);
     margin-bottom: 0.2rem;
@@ -84,9 +83,11 @@ ul {
 .month__item {
     padding: 0.1rem 0.5rem 0.1rem 0.2rem;
 }
+
 .endofweek {
     border-bottom: 1px solid rgba(0,0,0,0.1);
 }
+
 .dayofmonth {
     text-align: right;
     width: 1.2rem;
