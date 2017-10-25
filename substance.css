@@ -58,16 +58,15 @@ ul {
 .event .title {
     font-weight: bold;
 }
-
-.week__weekday {
+.week__item {
     border-bottom: 1px solid rgba(0,0,0,0.1);
-    padding: 0.1rem;
+    padding: 0.1rem 0.5rem 0.2rem 0.2rem;
+}
+.week__weekday {
 }
 
 .week__weekend {
     background-color: #c7f7ca;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
-    padding: 0.1rem;
 }
 
 
