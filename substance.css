@@ -76,7 +76,16 @@ ul {
     padding-bottom: 0.2rem;
 }
 
+.month__item {
+    padding: 0.1rem 0.5rem 0.1rem 0.2rem;
+}
 .endofweek {
     border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.dayofmonth {
+    text-align: right;
+    width: 1.2rem;
+    padding-right: 0.2rem;
+    display: inline-block;
 }
 
