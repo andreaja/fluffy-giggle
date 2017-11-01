@@ -18,15 +18,15 @@ body {
 }
 
 .layout__week {
-    flex: 1 0 auto;
+    flex: 1 0 15rem;
 }
 
 .layout__month {
-    flex: 1 0 auto;
+    flex: 1 0 15rem;
 }
 
 .layout__year {
-    flex: 1 0 auto;
+    flex: 1 0 15rem;
 
 }
 
