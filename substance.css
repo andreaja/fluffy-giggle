@@ -37,22 +37,7 @@ ul {
     margin: 0;
 }
 
-.day-heading {
-    color: #c7f7ca;  /* sea green */
-    background-color: #225f5e; /* pine green */
-    padding: 0.1rem;
-}
-.week-heading {
-    color: #c7f7ca;  /* sea green */
-    background-color: #225f5e; /* pine green */
-    padding: 0.1rem;
-}
-.month-heading {
-    color: #c7f7ca;  /* sea green */
-    background-color: #225f5e; /* pine green */
-    padding: 0.1rem;
-}
-.year-heading {
+.timespace-heading {
     color: #c7f7ca;  /* sea green */
     background-color: #225f5e; /* pine green */
     padding: 0.1rem;
