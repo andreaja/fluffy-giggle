@@ -115,4 +115,15 @@ ul {
 }
 .year__item {
     padding: 0.1rem 0.5rem 0.1rem 0.2rem;
+    display: flex;
+    line-height: 1;
+}
+
+.year__multiday {
+    background-color: #c7f7ca;
+}
+
+
+.yevent__end {
+    margin-left: auto;
 }
