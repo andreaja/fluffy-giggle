@@ -38,7 +38,7 @@ const ewsArgs = {
 
 exchange.run(ewsFunction, ewsArgs)
   .then(result => {
-    console.log(JSON.stringify(result));
+    console.log(JSON.stringify(result,null,4));
 })
 .catch(err => {
     console.log(err.stack);
