@@ -4,11 +4,35 @@ const config = require('./config');
 
 const exchange = new EWS(config);
 
-const ewsFunction = 'GetUserOofSettings';
+const ewsFunction = 'FindItem';
 
 const ewsArgs = {
-  'Mailbox': {
-    'Address': ""
+  'attributes': {
+    'Traversal': 'Shallow'
+  },
+  'ItemShape': {
+    'BaseShape': 'Default',
+    'AdditionalProperties': {
+      'FieldURI': {
+        'attributes': {
+          'FieldURI': 'calendar:MyResponseType'
+        }
+      }
+    }
+  },
+  'CalendarView': {
+    'attributes': {
+      'MaxEntriesReturned': 20,
+      'StartDate': '2017-12-05T00:00:00+01:00',
+      'EndDate': '2018-12-05T00:00:00+01:00'
+    }
+  },
+  'ParentFolderIds': {
+    'DistinguishedFolderId': {
+      'attributes': {
+        'Id': 'calendar'
+      }
+    }
   }
 };
 
