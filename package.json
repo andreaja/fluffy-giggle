@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "mustache": "^2.3.0",
     "node-ews": "^3.2.4"
   }
 }
