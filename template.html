@@ -12,26 +12,16 @@
       <div class="layout__day main__column">
         <h2 class="timespace-heading">Wednesday October 18th</h2>
         <ul class="day">
+          {{#events}}
           <li class="day__item">
-            <span class="timeofday">6</span>
-            <ul class="event"><li class="title"></li><li></li><li></li></ul>
+            <span class="timeofday">{{hour}}</span>
+            <ul class="event">
+                <li class="title">{{title}}</li>
+                <li>{{location}}</li>
+                <li>{{participants}}</li>
+            </ul>
           </li>
-          <li class="day__item">
-            <span class="timeofday">7</span>
-            <ul class="event"><li class="title"></li><li></li><li></li></ul>
-          </li>
-          <li class="day__item">
-            <span class="timeofday">8</span>
-            <ul class="event"><li class="title">Demo</li><li>M1802</li><li>3 accepted</li></ul>
-          </li>
-          <li class="day__item">
-            <span class="timeofday">9</span>
-            <ul class="event"><li class="title" class="title">Developer Only</li><li>M1702</li><li>30 accepted, 2 declined, 5 pending</li></ul>
-          </li>
-          <li class="day__item">
-            <span class="timeofday">10</span>
-            <ul class="event"><li class="title"></li><li></li><li></li></ul>
-          </li>
+          {{/events}}
           <li class="day__item">
             <span class="timeofday">11</span>
             <ul class="event"><li class="title">Fot i bakken</li><li>Stillerom</li><li>Kåre</li></ul>
