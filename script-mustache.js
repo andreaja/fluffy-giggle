@@ -35,6 +35,40 @@ var view = {
     },
   ],
 
+  "months": [
+    {
+      "day": [
+        {"date": 26},
+        {"date": 27, "display-title": "Bergen"},
+        {"date": 28, "eow?": true, "display-title": "Bergen"},
+        {"date": 30, "display-title": "Bergen"},
+        {"date": 30}
+      ],
+    },
+    {
+      "day": [
+        {"date": 01},
+        {"date": 02},
+        {"date": 03},
+        {"date": 04, "eow?": true, },
+        {"date": 05},
+        {"date": 06},
+        {"date": 07},
+        {"date": 08},
+        {"date": 09, "display-title": "FFconf"},
+        {"date": 10, "display-title": "FFconf"},
+        {"date": 11, "eow?": true, },
+        {"date": 12},
+        {"date": 13, "display-title": "PVRIS @ Rockefeller"},
+        {"date": 14},
+        {"date": 15},
+        {"date": 16}
+
+      ]
+
+    }
+  ]
+
 };
 
 var output = Mustache.render(loadTemplate("template.html"), view);

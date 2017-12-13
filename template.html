@@ -126,32 +126,13 @@
 
       <div class="layout__month main__column">
         <h2 class="timespace-heading">&nbsp;</h2>
-
+        {{#months}}
         <ul class="month">
-          <li class="month__item"><span class="dayofmonth">26</span></li>
-          <li class="month__item"><span class="dayofmonth">27</span> Bergen</li>
-          <li class="month__item endofweek"><span class="dayofmonth">28</span> Bergen</li>
-          <li class="month__item"><span class="dayofmonth">29</span> Bergen</li>
-          <li class="month__item"><span class="dayofmonth">30</span></li>
+          {{#day}}
+          <li class="month__item {{#eow?}}endofweek{{/eow?}}"><span class="dayofmonth">{{date}}</span> {{display-title}}</li>
+          {{/day}}
         </ul>
-        <ul class="month">
-          <li class="month__item"><span class="dayofmonth">1</span></li>
-          <li class="month__item"><span class="dayofmonth">2</span></li>
-          <li class="month__item"><span class="dayofmonth">3</span></li>
-          <li class="month__item endofweek"><span class="dayofmonth">4</span></li>
-          <li class="month__item"><span class="dayofmonth">5</span></li>
-          <li class="month__item"><span class="dayofmonth">6</span></li>
-          <li class="month__item"><span class="dayofmonth">7</span></li>
-          <li class="month__item"><span class="dayofmonth">8</span></li>
-          <li class="month__item"><span class="dayofmonth">9</span> FFConf</li>
-          <li class="month__item"><span class="dayofmonth">10</span> FFConf</li>
-          <li class="month__item endofweek"><span class="dayofmonth">11</span></li>
-          <li class="month__item"><span class="dayofmonth">12</span></li>
-          <li class="month__item"><span class="dayofmonth">13</span> PVRIS @ Rockefeller</li>
-          <li class="month__item"><span class="dayofmonth">14</span></li>
-          <li class="month__item"><span class="dayofmonth">15</span></li>
-          <li class="month__item"><span class="dayofmonth">16</span></li>
-        </ul>
+        {{/months}}
       </div>
       <div class="layout__year">
         <h2 class="timespace-heading">&nbsp;</h2>
