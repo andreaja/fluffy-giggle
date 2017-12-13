@@ -73,24 +73,16 @@
         <h2 class="timespace-heading">&nbsp;</h2>
 
         <ul class="week">
+          {{#weekday}}
           <li class="week__item week__weekday">
-            <h2>Thursday 19/10</h2>
+            <h2>{{day}}</h2>
             <ul class="day-of-week">
-              <li class="dow__item">8:30 – Standup</li>
-              <li class="dow__item">Ramen</li>
-              <li class="dow__item">Biggest meeting of the day</li>
+              {{#dow-event}}
+                <li class="dow__item">{{display-title}}</li>
+              {{/dow-event}}
             </ul>
           </li>
-          <li class="week__item week__weekday">
-            <h2>Friday 20/10</h2>
-            <ul class="day-of-week">
-              <ul class="day-of-week">
-                <li class="dow__item">Demo</li>
-                <li class="dow__item">Biggest meeting of the day</li>
-                <li class="dow__item">Afterwork </li>
-              </ul>
-            </ul>
-          </li>
+          {{/weekday}}
           <li class="week__item week__weekend">
             <h2>Saturday 21/10</h2>
             <ul class="day-of-week">
