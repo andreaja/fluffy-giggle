@@ -63,11 +63,18 @@ var view = {
         {"date": 14},
         {"date": 15},
         {"date": 16}
-
       ]
 
     }
-  ]
+  ],
+
+  "year": [
+    {"display-date": "Nov 06", "display-title": "Liars @ Blå"},
+    {"display-date": "Nov 22", "display-title": "H+K i Etiopia", "display-date-end": "Dec 06", "ymd?": true, },
+    {"display-date": "Dec 21", "display-title": "last.fm expires"},
+    {"display-date": "January"},
+
+]
 
 };
 

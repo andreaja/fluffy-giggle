@@ -137,10 +137,9 @@
       <div class="layout__year">
         <h2 class="timespace-heading">&nbsp;</h2>
         <ul class="year">
-          <li class="year__item">Nov 06&emsp; Liars @ Blå</li>
-          <li class="year__item year__multiday"><span>Nov 22&emsp; H+K i Etiopia</span><span class="yevent__end">Dec 06</span></li>
-          <li class="year__item">Dec 21&emsp; last.fm expires</li>
-          <li class="year__item">January</li>
+          {{#year}}
+          <li class="year__item {{#ymd?}}year__multiday{{/ymd?}}"><span>{{display-date}}&emsp; {{display-title}}</span><span class="yevent__end">{{display-date-end}}</span></li>
+          {{/year}}
           <li class="year__item">Feb 16&emsp; Gåte @ Rockefeller</li>
           <li class="year__item">Feb 28&emsp; Har du fått båtplass på båtplassen du har søkt på</li>
           <li class="year__item year__multiday"><div>Mar 11&emsp; 🇯🇵</div><span class="yevent__end" >Apr 05</span></li>
