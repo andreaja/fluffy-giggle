@@ -30,5 +30,17 @@ for (var i = 0; i < 7; i++){
 
 view.weekday = weekdays;
 
+var months = [ ];
+
+months[0] = {'day': []};
+
+for (var i = 0; i < 21; i++){
+    var d = new Date(viewingdate);
+    d.setDate(d.getDate() + 8 + i);
+    months[0].day.push({'date': d.getDate()});
+}
+
+view.months = months;
+
 var output = Mustache.render(loadTemplate("template.html"), view);
 console.log (output);
