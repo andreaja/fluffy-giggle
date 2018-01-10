@@ -8,6 +8,8 @@ function loadTemplate(templateName){
 
 var view = {
 
+  "pov-day": "Wednesday October 18th",
+
   "events": [
     {"hour": 6},
     {"hour": 7},
