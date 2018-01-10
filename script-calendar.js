@@ -22,7 +22,7 @@ ${viewingdate.getDate()}`;
 var hours = [ ];
 
 for (var i = 6; i < 22; i++){
-    hours.push({'hour':i});
+  hours.push({'hour':i});
 }
 
 view.events = hours;
@@ -30,9 +30,9 @@ view.events = hours;
 var weekdays = [ ];
 
 for (var i = 0; i < 7; i++){
-    var d = new Date(viewingdate);
-    d.setDate(d.getDate() + 1 + i);
-    weekdays.push({'day': `${week[d.getDay()]} ${d.getDate()}/${d.getMonth()+1} `});
+  var d = new Date(viewingdate);
+  d.setDate(d.getDate() + 1 + i);
+  weekdays.push({'day': `${week[d.getDay()]} ${d.getDate()}/${d.getMonth()+1} `});
 }
 
 view.weekday = weekdays;
@@ -42,9 +42,9 @@ var months = [ ];
 months[0] = {'day': []};
 
 for (var i = 0; i < 21; i++){
-    var d = new Date(viewingdate);
-    d.setDate(d.getDate() + 8 + i);
-    months[0].day.push({'date': d.getDate()});
+  var d = new Date(viewingdate);
+  d.setDate(d.getDate() + 8 + i);
+  months[0].day.push({'date': d.getDate()});
   //TODO finish adding info here, like week and month separators
 }
 
