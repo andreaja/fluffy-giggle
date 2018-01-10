@@ -45,9 +45,11 @@ for (var i = 0; i < 21; i++){
     var d = new Date(viewingdate);
     d.setDate(d.getDate() + 8 + i);
     months[0].day.push({'date': d.getDate()});
+  //TODO finish adding info here, like week and month separators
 }
 
 view.months = months;
+// TODO add rest of year view
 
 var output = Mustache.render(loadTemplate("template.html"), view);
 console.log (output);
