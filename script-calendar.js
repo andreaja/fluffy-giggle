@@ -8,7 +8,7 @@ function loadTemplate(templateName){
 
 const week = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
-const year = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+const monthsoftheyear = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
 var view = { };
 
@@ -16,7 +16,7 @@ var viewingdate = new Date('2018-01-10T00:00:00+01:00');
 
 view['pov-day'] = `
 ${week[viewingdate.getDay()]}
-${year[viewingdate.getMonth()]}
+${monthsoftheyear[viewingdate.getMonth()]}
 ${viewingdate.getDate()}`;
 
 var hours = [ ];
