@@ -49,7 +49,18 @@ for (let i = 0; i < 21; i++){
 }
 
 view.months = months;
-// TODO add rest of year view
+
+var year = [ ];
+
+for (let i = 0; i < 13; i++){
+  let d = new Date(viewingdate);
+  d.setMonth(d.getMonth() + 1 + i);
+  year.push({'display-date': monthsoftheyear[d.getMonth()]});
+}
+
+view.year = year;
+
+
 
 var output = Mustache.render(loadTemplate("template.html"), view);
 console.log (output);
