@@ -23,7 +23,7 @@ const ewsArgs = {
   },
   'CalendarView': {
     'attributes': {
-      'MaxEntriesReturned': 20,
+      'MaxEntriesReturned': 500,
       'StartDate': '2017-12-05T00:00:00+01:00',
       'EndDate': '2018-12-05T00:00:00+01:00'
     }
