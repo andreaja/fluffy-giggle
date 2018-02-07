@@ -31,8 +31,8 @@ for (let i = 6; i < 22; i++){
   let windowend = new Date(viewingdate);
   windowend.setHours(i+1);
   let eventlist = calendaritems.filter(function(item){
-  var d = new Date(item.Start);
-  return d >= windowstart && d < windowend;
+    var d = new Date(item.Start);
+    return d >= windowstart && d < windowend;
   });
   if (eventlist.length > 0) {
     for(let j = 0; j < eventlist.length ; j++){
