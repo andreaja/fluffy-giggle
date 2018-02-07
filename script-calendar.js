@@ -2,6 +2,8 @@ const Mustache = require('mustache');
 
 const fs = require('fs');
 
+const exchangedata = require('./exchange-calendar');
+
 function loadTemplate(templateName){
   return fs.readFileSync(templateName).toString();
 }
@@ -10,9 +12,11 @@ const week = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 
 
 const monthsoftheyear = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
+const calendaritems = exchangedata.ResponseMessages.FindItemResponseMessage.RootFolder.Items.CalendarItem;
+
 var view = { };
 
-var viewingdate = new Date('2018-01-10T00:00:00+01:00');
+var viewingdate = new Date('2018-01-11T00:00:00+01:00');
 
 view['pov-day'] = `
 ${week[viewingdate.getDay()]}
@@ -22,7 +26,14 @@ ${viewingdate.getDate()}`;
 var hours = [ ];
 
 for (let i = 6; i < 22; i++){
-  hours.push({'hour':i});
+  let eventlist = calendaritems.filter(function(item){
+  var d = new Date(item.Start);
+  return d.getFullYear() === viewingdate.getFullYear() &&
+  d.getMonth() === viewingdate.getMonth() &&
+  d.getDate() === viewingdate.getDate();
+  });
+  let event = eventlist[0];
+  hours.push({'hour':i, 'title': event.Subject});
 }
 
 view.events = hours;
