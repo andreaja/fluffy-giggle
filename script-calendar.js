@@ -26,14 +26,21 @@ ${viewingdate.getDate()}`;
 var hours = [ ];
 
 for (let i = 6; i < 22; i++){
+  let windowstart = new Date(viewingdate);
+  windowstart.setHours(i);
+  let windowend = new Date(viewingdate);
+  windowend.setHours(i+1);
   let eventlist = calendaritems.filter(function(item){
   var d = new Date(item.Start);
-  return d.getFullYear() === viewingdate.getFullYear() &&
-  d.getMonth() === viewingdate.getMonth() &&
-  d.getDate() === viewingdate.getDate();
+  return d >= windowstart && d < windowend;
   });
-  let event = eventlist[0];
-  hours.push({'hour':i, 'title': event.Subject});
+  if (eventlist.length > 0) {
+    let event = eventlist[0];
+    hours.push({'hour':i, 'title': event.Subject});
+  }
+  else {
+    hours.push({'hour':i});
+  }
 }
 
 view.events = hours;
