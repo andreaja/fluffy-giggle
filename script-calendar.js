@@ -36,7 +36,7 @@ for (let i = 6; i < 22; i++){
   });
   if (eventlist.length > 0) {
     let event = eventlist[0];
-    hours.push({'hour':i, 'title': event.Subject});
+    hours.push({'hour':i, 'title': event.Subject, 'location': event.Location});
   }
   else {
     hours.push({'hour':i});
