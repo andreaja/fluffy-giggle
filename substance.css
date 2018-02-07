@@ -112,3 +112,10 @@ ul {
 .yevent__end {
     margin-left: auto;
 }
+
+
+/* utils */
+
+.dib {
+    display: inline-block;
+}
