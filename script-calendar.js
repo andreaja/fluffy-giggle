@@ -35,10 +35,17 @@ for (let i = 6; i < 22; i++){
   return d >= windowstart && d < windowend;
   });
   if (eventlist.length > 0) {
-    let event = eventlist[0];
-    hours.push({'hour':i, 'title': event.Subject, 'location': event.Location});
-  }
-  else {
+    for(let j = 0; j < eventlist.length ; j++){
+      let start = new Date(eventlist[j].Start);
+      let displayStart = start.getHours();
+      if(start.getMinutes() != 0){
+        displayStart += ":" + start.getMinutes();
+      }
+      hours.push({'hour': displayStart,
+                  'title': eventlist[j].Subject,
+                  'location': eventlist[j].Location});
+    }
+  } else {
     hours.push({'hour':i});
   }
 }
