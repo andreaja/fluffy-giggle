@@ -1,0 +1,130 @@
+h1, h2, h3, h4, h5 {
+    font-size: 1rem;
+    margin: 0;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.layout {
+    color: #225f5e; /* pine green */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.layout__day {
+    flex: 1 0 15rem;
+}
+
+.layout__week {
+    flex: 1 0 15rem;
+}
+
+.layout__month {
+    flex: 1 0 15rem;
+}
+
+.layout__year {
+    flex: 1 0 15rem;
+
+}
+
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.timespace-heading {
+    color: #c7f7ca;  /* sea green */
+    background-color: #225f5e; /* pine green */
+    padding: 0.1rem;
+}
+
+.day {
+    display: grid;
+}
+
+.day__item {
+    padding: 0.1rem 0.5rem 0.1rem 0.2rem;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    background-color: #c7f7ca; /* sea green */
+    display: flex;
+}
+
+.day__timeofday {
+    vertical-align: top;
+    text-align: right;
+    width: 2.5rem;
+    padding-right: 0.2rem;
+}
+
+.day__event {
+}
+
+.day__event .title {
+    font-weight: bold;
+}
+.week__item {
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding: 0.1rem 0.5rem 0.2rem 0.2rem;
+}
+.week__weekday {
+}
+
+.week__weekend {
+    background-color: #c7f7ca;
+}
+
+.month {
+    border-bottom: 1px dashed rgba(0,0,0,0.2);
+    margin-bottom: 0.2rem;
+    padding-bottom: 0.2rem;
+}
+
+.month__item {
+    padding: 0.1rem 0.5rem 0.1rem 0.2rem;
+}
+
+.endofweek {
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.dayofmonth {
+    text-align: right;
+    width: 1.2rem;
+    padding-right: 0.2rem;
+    display: inline-block;
+}
+
+.year-heading {
+    padding: 0.1rem 0.5rem 0.1rem 0.2rem;
+}
+.year__item {
+    padding: 0.1rem 0.5rem 0.1rem 0.2rem;
+    display: flex;
+    line-height: 1;
+}
+
+.year__multiday {
+    background-color: #c7f7ca;
+}
+
+
+.yevent__end {
+    margin-left: auto;
+}
+
+
+/* utils */
+
+.dib {
+    display: inline-block;
+}
+
+.debug {
+    outline: 1px dashed red;
+}
+
