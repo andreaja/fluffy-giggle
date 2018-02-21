@@ -119,3 +119,7 @@ ul {
 .dib {
     display: inline-block;
 }
+
+.debug {
+    outline: 1px dashed red;
+}
