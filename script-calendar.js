@@ -16,7 +16,7 @@ const calendaritems = exchangedata.ResponseMessages.FindItemResponseMessage.Root
 
 var view = { };
 
-var viewingdate = new Date('2018-01-11T00:00:00+01:00');
+var viewingdate = new Date('2017-12-19T00:00:00+01:00');
 
 view['pov-day'] = `
 ${week[viewingdate.getDay()]}
@@ -25,7 +25,7 @@ ${viewingdate.getDate()}`;
 
 var hours = [ ];
 
-for (let i = 6; i < 22; i++){
+for (let columns = [], i = 6; i < 22; i++){
   let windowstart = new Date(viewingdate);
   windowstart.setHours(i);
   let windowend = new Date(viewingdate);
@@ -37,16 +37,34 @@ for (let i = 6; i < 22; i++){
   if (eventlist.length > 0) {
     for(let j = 0; j < eventlist.length ; j++){
       let start = new Date(eventlist[j].Start);
+      let end = new Date(eventlist[j].End);
+
       let displayStart = start.getHours();
       if(start.getMinutes() != 0){
         displayStart += ":" + start.getMinutes();
       }
+
+      let firstRow = (start.getHours()-6 + start.getMinutes()/60.0)*4;
+      let lastRow = (end.getHours()-6 + end.getMinutes()/60.0)*4;
+      let k = 2;
+
+      while(columns[k] > firstRow) {
+        k++;
+      }
+
+      columns[k] = lastRow;
+
       hours.push({'hour': displayStart,
+                  'start-row': firstRow,
+                  'end-row': lastRow,
+                  'kol': k,
                   'title': eventlist[j].Subject,
                   'location': eventlist[j].Location});
     }
   } else {
-    hours.push({'hour':i});
+    hours.push({'hour':i,
+                'start-row': (i-6)*4
+               });
   }
 }
 

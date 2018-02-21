@@ -11,18 +11,18 @@
 
       <div class="layout__day main__column">
         <h2 class="timespace-heading">{{pov-day}}</h2>
-        <ul class="day">
+        <div class="day">
           {{#events}}
-          <li class="day__item">
-            <span class="timeofday">{{hour}}</span>
-            <ul class="event">
-              <li class="title dib">{{title}}</li>
-              <li class="dib">{{location}}</li>
-              <li>{{participants}}</li>
-            </ul>
-          </li>
+          <span class="day__timeofday" style="grid-column: 1; grid-row: {{start-row}}">{{hour}}</span>
           {{/events}}
-        </ul>
+          {{#events}}
+          <ul class="day__event" style="grid-column: {{kol}}; grid-row-start: {{start-row}}; grid-row-end: {{end-row}}">
+            <li class="title dib">{{title}}</li>
+            <li class="dib">{{location}}</li>
+            <li>{{participants}}</li>
+          </ul>
+          {{/events}}
+        </div>
       </div>
 
       <div class="layout__week main__column">

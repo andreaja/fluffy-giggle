@@ -43,6 +43,10 @@ ul {
     padding: 0.1rem;
 }
 
+.day {
+    display: grid;
+}
+
 .day__item {
     padding: 0.1rem 0.5rem 0.1rem 0.2rem;
     border-top: 1px solid rgba(0,0,0,0.1);
@@ -50,17 +54,17 @@ ul {
     display: flex;
 }
 
-.timeofday {
+.day__timeofday {
     vertical-align: top;
     text-align: right;
     width: 2.5rem;
     padding-right: 0.2rem;
 }
 
-.event {
+.day__event {
 }
 
-.event .title {
+.day__event .title {
     font-weight: bold;
 }
 .week__item {
@@ -123,3 +127,4 @@ ul {
 .debug {
     outline: 1px dashed red;
 }
+

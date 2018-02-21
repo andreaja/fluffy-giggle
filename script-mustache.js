@@ -11,11 +11,12 @@ var view = {
   "pov-day": "Wednesday October 18th",
 
   "events": [
-    {"hour": 6},
-    {"hour": 7},
-    {"hour": 8, "title": "demo", "location": "M1802", "participants": "3 accepted"},
-    {"hour": 9, "title": "developer only", "location": "M1702", "participants": "30 accepted, 2 declined, 5 pending"},
-    {"hour": 10}
+    {"hour": 6, "start-row": 0 },
+    {"hour": 7, "start-row": 4 },
+    {"hour": 8, "start-row": 8, "end-row": "span 2", "kol": 2, "title": "demo", "location": "M1802", "participants": "3 accepted"},
+    {"hour": 9, "start-row": 12, "end-row": "span 4", "kol": 2, "title": "developer only", "location": "M1702", "participants": "30 accepted, 2 declined, 5 pending"},
+    {"hour": "9:30", "start-row": 14, "end-row": "span 4", "kol": 3, "title": "doodles only", "location": "M1802", "participants": "10 accepted, 2 declined, 5 pending"},
+    {"hour": 10, "start-row": 16}
   ],
 
   "weekday": [
