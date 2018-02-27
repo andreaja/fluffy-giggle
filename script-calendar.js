@@ -58,12 +58,14 @@ for (let columns = [], i = 6; i < 22; i++){
                   'start-row': firstRow,
                   'end-row': lastRow,
                   'kol': k,
+                  'class': 'day__event',
                   'title': eventlist[j].Subject,
                   'location': eventlist[j].Location});
     }
   } else {
     hours.push({'hour':i,
-                'start-row': (i-6)*4
+                'start-row': (i-6)*4,
+                'class': 'dn'
                });
   }
 }

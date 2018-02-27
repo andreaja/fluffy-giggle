@@ -16,7 +16,7 @@
           <span class="day__timeofday" style="grid-column: 1; grid-row: {{start-row}}">{{hour}}</span>
           {{/events}}
           {{#events}}
-          <ul class="day__event" style="grid-column: {{kol}}; grid-row-start: {{start-row}}; grid-row-end: {{end-row}}">
+          <ul class="{{class}}" style="grid-column: {{kol}}; grid-row-start: {{start-row}}; grid-row-end: {{end-row}}">
             <li class="title dib">{{title}}</li>
             <li class="dib">{{location}}</li>
             <li>{{participants}}</li>
