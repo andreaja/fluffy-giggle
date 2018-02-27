@@ -41,11 +41,25 @@ for (let columns = [], i = 6; i < 22; i++){
 
       let displayStart = start.getHours();
       if(start.getMinutes() != 0){
-        displayStart += ":" + start.getMinutes();
+        let minutes = Math.round(start.getMinutes()/15)*15;
+        if(minutes==60){
+          displayStart += 1;
+        }else{
+          displayStart += ":" + minutes;
+        }
+      }
+      let displayEnd = end.getHours();
+      if(end.getMinutes() != 0){
+        let minutes = Math.round(end.getMinutes()/15)*15;
+        if(minutes == 60){
+          displayEnd += 1;
+        }else{
+          displayEnd += ":" + minutes;
+        }
       }
 
-      let firstRow = (start.getHours()-6 + start.getMinutes()/60.0)*4;
-      let lastRow = (end.getHours()-6 + end.getMinutes()/60.0)*4;
+      let firstRow = Math.round((start.getHours()-6 + start.getMinutes()/60.0)*4);
+      let lastRow = Math.round((end.getHours()-6 + end.getMinutes()/60.0)*4);
       let k = 2;
 
       while(columns[k] > firstRow) {
