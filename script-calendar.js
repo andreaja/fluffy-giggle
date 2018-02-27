@@ -24,6 +24,7 @@ ${monthsoftheyear[viewingdate.getMonth()]}
 ${viewingdate.getDate()}`;
 
 var hours = [ ];
+var timesofday = [ ];
 
 for (let columns = [], i = 6; i < 22; i++){
   let windowstart = new Date(viewingdate);
@@ -68,6 +69,10 @@ for (let columns = [], i = 6; i < 22; i++){
 
       columns[k] = lastRow;
 
+      timesofday.push({'hour': displayStart,
+                       'start-row': firstRow });
+      timesofday.push({'hour': displayEnd,
+                       'start-row': lastRow });
       hours.push({'hour': displayStart,
                   'start-row': firstRow,
                   'end-row': lastRow,
@@ -77,14 +82,19 @@ for (let columns = [], i = 6; i < 22; i++){
                   'location': eventlist[j].Location});
     }
   } else {
-    hours.push({'hour':i,
-                'start-row': (i-6)*4,
-                'class': 'dn'
+    timesofday.push({'hour':i,
+                     'start-row': (i-6)*4,
+                     'class': 'dn'
                });
   }
 }
+timesofday = timesofday.sort(function(a,b){return a['start-row'] - b['start-row'];});
+timesofday = timesofday.filter(function(el, index, arr){
+  return arr.findIndex(function(e){return e['start-row'] === el['start-row'];}) === index;
+});
 
 view.events = hours;
+view.timesofday = timesofday;
 
 var weekdays = [ ];
 
@@ -111,15 +121,15 @@ view.months = months;
 
 var year = [ ];
 
-for (let i = 0; i < 13; i++){
-  let d = new Date(viewingdate);
-  d.setMonth(d.getMonth() + 1 + i);
-  year.push({'display-date': monthsoftheyear[d.getMonth()]});
-}
+  for (let i = 0; i < 13; i++){
+    let d = new Date(viewingdate);
+    d.setMonth(d.getMonth() + 1 + i);
+    year.push({'display-date': monthsoftheyear[d.getMonth()]});
+  }
 
-view.year = year;
+  view.year = year;
 
 
 
-var output = Mustache.render(loadTemplate("template.html"), view);
-console.log (output);
+  var output = Mustache.render(loadTemplate("template.html"), view);
+  console.log (output);

@@ -12,9 +12,9 @@
       <div class="layout__day main__column">
         <h2 class="timespace-heading">{{pov-day}}</h2>
         <div class="day">
-          {{#events}}
+          {{#timesofday}}
           <span class="day__timeofday" style="grid-column: 1; grid-row: {{start-row}}">{{hour}}</span>
-          {{/events}}
+          {{/timesofday}}
           {{#events}}
           <ul class="{{class}}" style="grid-column: {{kol}}; grid-row-start: {{start-row}}; grid-row-end: {{end-row}}">
             <li class="title dib">{{title}}</li>
