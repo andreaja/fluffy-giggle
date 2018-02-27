@@ -45,7 +45,7 @@ ul {
 
 .day {
     display: grid;
-    background-color: #c7f7ca; /* sea green */
+    background-color: white; /*#c7f7ca; /* sea green */
     grid-gap: 0.2rem;
 }
 
