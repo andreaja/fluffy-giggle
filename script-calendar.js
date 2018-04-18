@@ -136,6 +136,7 @@ for (let i = 0; i < 7; i++){
     dayofw.push({'display-title':last.Subject});
   }
   weekdays.push({'day': `${week[d.getDay()]} ${d.getDate()}/${d.getMonth()+1}`,
+                 'weekday_class': d.getDay() == 0 || d.getDay() == 6 ? 'week__weekend' : 'week__weekday',
                  'dow-event': dayofw});
 }
 
