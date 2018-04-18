@@ -101,9 +101,22 @@ view.timesofday = timesofday;
 var weekdays = [ ];
 
 for (let i = 0; i < 7; i++){
+  let dayofw = [ ];
   let d = new Date(viewingdate);
   d.setDate(d.getDate() + 1 + i);
-  weekdays.push({'day': `${week[d.getDay()]} ${d.getDate()}/${d.getMonth()+1} `});
+  /* jshint -W083 */
+  let alldaystart = calendaritems.filter(function(item){
+    var start = new Date(item.Start);
+    return start.getFullYear() == d.getFullYear() &&
+    start.getMonth() == d.getMonth() &&
+    start.getDate() == d.getDate();
+  });
+  /* jshint +W083 */
+  for (let j = 0; j < alldaystart.length; j++){
+    dayofw.push({'display-title': alldaystart[j].Subject});
+  }
+  weekdays.push({'day': `${week[d.getDay()]} ${d.getDate()}/${d.getMonth()+1} `,
+    'dow-event': dayofw});
 }
 
 view.weekday = weekdays;
