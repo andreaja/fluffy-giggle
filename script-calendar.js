@@ -105,20 +105,38 @@ for (let i = 0; i < 7; i++){
   let d = new Date(viewingdate);
   d.setDate(d.getDate() + 1 + i);
   /* jshint -W083 */
-  let alldaystart = calendaritems.filter(function(item){
+  let rightday = calendaritems.filter(function(item){
     var start = new Date(item.Start);
     let rightdate = start.getFullYear() == d.getFullYear() &&
-    start.getMonth() == d.getMonth() &&
-    start.getDate() == d.getDate();
-    let interestingevent = item.MyResponseType == 'Accept' || item.MyResponseType == 'Organizer';
+        start.getMonth() == d.getMonth() &&
+        start.getDate() == d.getDate();
+    let interestingevent = (item.MyResponseType == 'Accept' || item.MyResponseType == 'Organizer');
     return rightdate && interestingevent;
   });
   /* jshint +W083 */
+
+  let alldaystart = rightday.filter(function(item){
+    return item.IsAllDayEvent == "true";
+  });
+
   for (let j = 0; j < alldaystart.length; j++){
     dayofw.push({'display-title': alldaystart[j].Subject});
   }
-  weekdays.push({'day': `${week[d.getDay()]} ${d.getDate()}/${d.getMonth()+1} `,
-    'dow-event': dayofw});
+
+  /* jshint -W083 */
+  rightday.sort(function(a,b){return new Date(a.Start) - new Date(b.Start);});
+  /* jshint +W083 */
+  let first = rightday.shift();
+  let last = rightday.pop();
+  if(first){
+    dayofw.push({'display-title':first.Subject});
+  }
+
+  if(last){
+    dayofw.push({'display-title':last.Subject});
+  }
+  weekdays.push({'day': `${week[d.getDay()]} ${d.getDate()}/${d.getMonth()+1}`,
+                 'dow-event': dayofw});
 }
 
 view.weekday = weekdays;
