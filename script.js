@@ -12,7 +12,7 @@ const ewsArgs = {
     'Traversal': 'Shallow'
   },
   'ItemShape': {
-    'BaseShape': 'Default',
+    'BaseShape': 'AllProperties',
     'AdditionalProperties': {
       'FieldURI': {
         'attributes': {
