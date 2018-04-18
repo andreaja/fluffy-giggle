@@ -31,10 +31,12 @@ for (let columns = [], i = 6; i < 22; i++){
   windowstart.setHours(i);
   let windowend = new Date(viewingdate);
   windowend.setHours(i+1);
+  /* jshint -W083 */
   let eventlist = calendaritems.filter(function(item){
     var d = new Date(item.Start);
     return d >= windowstart && d < windowend;
   });
+  /* jshint +W083 */
   if (eventlist.length > 0) {
     for(let j = 0; j < eventlist.length ; j++){
       let start = new Date(eventlist[j].Start);
