@@ -107,9 +107,11 @@ for (let i = 0; i < 7; i++){
   /* jshint -W083 */
   let alldaystart = calendaritems.filter(function(item){
     var start = new Date(item.Start);
-    return start.getFullYear() == d.getFullYear() &&
+    let rightdate = start.getFullYear() == d.getFullYear() &&
     start.getMonth() == d.getMonth() &&
     start.getDate() == d.getDate();
+    let interestingevent = item.MyResponseType == 'Accept' || item.MyResponseType == 'Organizer';
+    return rightdate && interestingevent;
   });
   /* jshint +W083 */
   for (let j = 0; j < alldaystart.length; j++){
