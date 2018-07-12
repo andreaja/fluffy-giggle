@@ -152,8 +152,15 @@ months[0] = {'day': []};
 for (let i = 0; i < 21; i++){
   let d = new Date(viewingdate);
   d.setDate(d.getDate() + 8 + i);
-  months[0].day.push({'date': d.getDate()});
-  //TODO finish adding info here, like week and month separators
+  let startingEvent = findInterestingEventsByDate(calendaritems, d);
+  let allDayStartingEvents = startingEvent.filter(function(item){
+    return item.IsAllDayEvent == 'true';
+  });
+  if (allDayStartingEvents.length > 0){
+    months[0].day.push({'date': d.getDate()});
+  } else {
+    months[0].day.push({'date': d.getDate()});
+  }
 }
 
 view.months = months;
