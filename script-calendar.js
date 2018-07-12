@@ -14,6 +14,17 @@ const monthsoftheyear = ['January', 'February', 'March', 'April', 'May', 'June',
 
 const calendaritems = exchangedata.ResponseMessages.FindItemResponseMessage.RootFolder.Items.CalendarItem;
 
+function findInterestingEventsByDate (calendarList, interestingDate){
+  return calendarList.filter(function(item){
+    var start = new Date(item.Start);
+    let rightdate = start.getFullYear() == interestingDate.getFullYear() &&
+    start.getMonth() == interestingDate.getMonth() &&
+    start.getDate() == interestingDate.getDate();
+    let interestingevent = (item.MyResponseType == 'Accept' || item.MyResponseType == 'Organizer');
+    return rightdate && interestingevent;
+  });
+}
+
 var view = { };
 
 var viewingdate = new Date('2017-12-19T00:00:00+01:00');
@@ -104,16 +115,8 @@ for (let i = 0; i < 7; i++){
   let dayofw = [ ];
   let d = new Date(viewingdate);
   d.setDate(d.getDate() + 1 + i);
-  /* jshint -W083 */
-  let rightday = calendaritems.filter(function(item){
-    var start = new Date(item.Start);
-    let rightdate = start.getFullYear() == d.getFullYear() &&
-        start.getMonth() == d.getMonth() &&
-        start.getDate() == d.getDate();
-    let interestingevent = (item.MyResponseType == 'Accept' || item.MyResponseType == 'Organizer');
-    return rightdate && interestingevent;
-  });
-  /* jshint +W083 */
+
+  let rightday = findInterestingEventsByDate(calendaritems, d);
 
   let alldaystart = rightday.filter(function(item){
     return item.IsAllDayEvent == "true";
